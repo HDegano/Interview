@@ -18,7 +18,6 @@ public class Pow {
         return result;
     }
 
-
     private double innerPow(double a, int b){
 
         if(a == 0) return 0;

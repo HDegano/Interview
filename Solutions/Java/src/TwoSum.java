@@ -1,4 +1,6 @@
+import java.util.Deque;
 import java.util.HashMap;
+import java.util.LinkedList;
 
 /**
  * Created by HDegano on 6/17/2015.
@@ -40,5 +42,4 @@ public class TwoSum {
 
         throw new IllegalArgumentException("No two sum solution");
     }
-
 }
