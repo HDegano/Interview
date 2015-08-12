@@ -1,9 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Interview
 {
@@ -42,14 +38,27 @@ namespace Interview
                 visited.Add(new Tuple<int, int>(i, j));
 
                 k++;
-                if (innerFind(board, i + 1, j, word, k, visited) || innerFind(board, i - 1, j, word, k, visited)
-                    || innerFind(board, i, j + 1, word, k, visited) || innerFind(board, i, j - 1, word, k, visited))
-                    return true;
+
+                foreach (var offSet in OffSets)
+                {
+                    if (innerFind(board, i + offSet[0], j + offSet[1], word, k, visited))
+                        return true;
+                }
 
                 visited.Remove(new Tuple<int, int>(i, j)); //remove from path
             }
 
             return false;
         }
+
+        private static readonly int[][] OffSets =
+        {
+            new []{1, 0},
+            new []{0, 1},
+            new []{-1, 0},
+            new []{0, -1}
+        };
     }
+
+    
 }

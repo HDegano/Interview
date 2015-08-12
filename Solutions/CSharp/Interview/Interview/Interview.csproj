@@ -39,6 +39,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ListNode.cs" />
+    <Compile Include="ListBuilder.cs" />
+    <Compile Include="MinEditDistance.cs" />
+    <Compile Include="MinWindowSubstring.cs" />
+    <Compile Include="PlusOne.cs" />
+    <Compile Include="ReverseKNodes.cs" />
+    <Compile Include="RotateNxNMatrix.cs" />
     <Compile Include="WordSearch.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
